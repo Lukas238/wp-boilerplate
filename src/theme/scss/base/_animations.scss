@@ -1,0 +1,19 @@
+
+@include  keyframes(fade_out) {
+	0% {
+		opacity: 1;
+	}
+
+	100% {
+		opacity: 0;
+	}
+}
+
+@mixin animation-fade-out {
+	@include  animation-name(fade_out);
+	@include  animation-duration(1s);
+	@include  animation-timing-function(ease-in-out);
+	@include  animation-iteration-count(1);
+	@include  animation-delay(0s);
+	@include  animation-fill-mode(forwards);
+}

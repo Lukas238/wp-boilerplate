@@ -1,0 +1,32 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "ul-cols": (
+      property: "columns",
+      class: "-cols",
+      responsive: true,
+      values: (
+        1: 1,
+        2: 2,
+        3: 3,
+        4: 4,
+      ),
+    ),
+    "object-position": (
+      property: "object-position",
+      class: "op",
+      responsive: true,
+      values: (
+        sc: right center,
+        cc: center center,
+        ec: left center,
+        st: right top,
+        ct: center top,
+        et: left top,
+        sb: right bottom,
+        cb: center bottom,
+        eb: left bottom,
+      ),
+    ),
+  )
+);

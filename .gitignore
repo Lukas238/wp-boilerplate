@@ -1,0 +1,17 @@
+# Ignore dependencies from npm and Composer:
+/node_modules
+/vendor
+/wordpress
+
+# Ignore generated JavaScript files:
+*.min.js
+
+# Ignore generated CSS files:
+style.css
+style-editor.css
+
+# Ignore the generated zip file:
+theme.zip
+
+# Ignore .DS_Store files from macOS:
+.DS_Store

@@ -1,0 +1,13 @@
+@use "sass:string";
+
+@function contrast-color($color, $dark: $plt__core__black, $light: $plt__core__white, $percentage: 55%) {
+  @if $color == transparent {
+    $color: $plt__core__white;
+  }
+  @return if(lightness($color) < $percentage, $light, $dark);
+}
+
+@function get_parent_selector($selector: "#{&}") {
+  $selectors: string.split($selector, ' '); // Split the selector by whitespace
+  @return nth($selectors, -1); // Return the last element of the selectors list
+}

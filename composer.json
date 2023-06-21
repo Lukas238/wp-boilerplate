@@ -1,0 +1,22 @@
+{
+    "name": "ldasso/wp-boilerplate",
+    "autoload": {
+        "psr-4": {
+            "Ldasso\\WpBoilerplate\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Lucas Dasso",
+            "email": "lucas.dasso@wundermanthompson.com"
+        }
+    ],
+    "require": {
+        "johnpbloch/wordpress": "^6.2"
+    },
+    "config": {
+        "allow-plugins": {
+            "johnpbloch/wordpress-core-installer": true
+        }
+    }
+}

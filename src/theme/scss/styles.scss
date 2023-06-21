@@ -1,0 +1,15 @@
+/*
+ * Theme Name: WP-Boilerplate
+ * Description: Starter theme.
+ * Author: WP-Boilerplate team
+*/
+
+@charset "UTF-8";
+
+@import 'settings';
+@import 'vendors';
+@import 'tools';
+@import 'base';
+@import 'layout';
+@import 'components/*';
+@import 'trumps';

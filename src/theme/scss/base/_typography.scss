@@ -1,0 +1,195 @@
+> *{
+  font-family: 'Open Sans', Arial,'Helvetica Neue',Helvetica, sans-serif;
+  font-size:  1.4875em;
+  line-height: 1.65em;
+}
+
+h1, .h1{
+  font-size: 2.5em;
+  font-weight: 100;
+  color: $plt__membership__general;
+}
+
+.-title{
+  @extend .h1, .text-center;
+  color: $plt__membership__general;
+}
+
+
+
+h5, .h5{
+  font-size: 1em;
+  font-weight: 600;
+}
+
+h6, .h6{
+  font-size: 1em;
+  font-weight: normal;
+}
+
+
+// Buttons
+.btn {
+  text-transform: uppercase;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+
+a.btn{
+  font-size: 1.6rem !important;
+}
+// button:not(.unstyled),
+input[type="button"],
+input[type="submit"],
+input[type="reset"] {
+  @extend .btn;
+
+  font-size: 1.6rem !important;
+
+  // &:focus{
+  //   outline: none;
+  // }
+  // Default
+  @include button-variant(
+    $plt__core__united_blue,
+    $plt__core__united_blue,
+    $color: $plt__core__white,
+    $disabled-background: gray,
+    $disabled-color: $plt__core__white,
+    $disabled-border: darkgray
+  );
+
+
+}
+
+.btn-default {
+  @include button-variant(
+    $plt__core__white,
+    $plt__secondary__purple__dark,
+    $color: $plt__secondary__purple__dark,
+    $disabled-background: gray,
+    $disabled-color: $plt__core__white,
+    $disabled-border: darkgray,
+    $hover-color:$plt__secondary__purple__dark--80
+  );
+  --#{$prefix}btn-focus-shadow-rgb: var(--btn-focus-rgb);
+  --#{$prefix}btn-border-width: 2px;
+
+}
+
+.btn-primary{
+  @include button-variant(
+    $plt__core__united_blue,
+    $plt__core__united_blue,
+    $color: $plt__core__white,
+    $disabled-background: gray,
+    $disabled-color: $plt__core__white,
+    $disabled-border: darkgray
+  );
+  --#{$prefix}btn-focus-shadow-rgb: var(--btn-focus-rgb);
+}
+
+.btn-secondary {
+  @include button-variant(
+    $plt__core__white,
+    $plt__core__white,
+    $color: $plt__core__black,
+    $hover-background: $plt__neutral__tonal_gray__light,
+    $disabled-background: gray,
+    $disabled-color: $plt__core__white,
+    $disabled-border: darkgray
+  );
+}
+
+//Tables
+table:not([role="presentation"]) {
+  @extend .table;
+}
+
+// Forms labels
+label {
+  @extend .form-label;
+}
+
+input[type="date"],
+input[type="datetime-local"],
+input[type="email"],
+input[type="month"],
+input[type="number"],
+input[type="password"],
+input[type="search"],
+input[type="tel"],
+input[type="text"],
+input[type="time"],
+input[type="url"],
+input[type="week"],
+input[type="file"],
+textarea {
+  @extend .form-control;
+}
+
+input[type="range"] {
+  @extend .form-range;
+}
+input[type="color"] {
+  @extend .form-control, .form-control-color;
+}
+
+select {
+  @extend .form-select;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  @extend .form-check-input;
+}
+// Links
+
+a {
+  color: var(--link-color);
+
+  &.-cta {
+    &:after {
+      content: "";
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: 100% 100%;
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      vertical-align: middle;
+      background-image: var(--link-cta-image);
+    }
+  }
+
+  &:not([href*="united.com"]):not([href^="/"]):not([href^="#"]):not([href^="tel:"]):not([href^="mailto:"]) {
+    .external {
+      &:before {
+        content: " (This link opens to an external site that may or may not meet accessibility guidelines)";
+        @extend .visually-hidden;
+      }
+      white-space: nowrap;
+      &:after {
+        content: "";
+        background-image: var(--link-external-icon);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: 10px 10px;
+        display: inline-block;
+        width: 20px;
+        height: 10px;
+        vertical-align: middle;
+      }
+    }
+  }
+
+  &:hover {
+    color: var(--link-color--hover);
+    text-decoration: none;
+  }
+
+  &:focus {
+    outline: 2px solid var(--link-outline);
+  }
+}

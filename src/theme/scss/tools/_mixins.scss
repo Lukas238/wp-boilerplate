@@ -1,0 +1,137 @@
+@mixin link--dark{
+  $color: #006080;
+
+  color: $color;
+  text-decoration: underline;
+  border-bottom: none;
+
+  &:after {
+    background-image: url( $icon_external__steelblue);
+  }
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color;
+    text-decoration: none;
+  }
+}
+
+@mixin link--light{
+  color: #ffffff;
+  text-decoration: underline;
+  // border-bottom: none;
+
+  &:after {
+    background-image: url($icon_external__white) !important;
+  }
+
+
+
+  &:hover,
+  &:active,
+  &:focus {
+    color: #ffffff;
+    text-decoration: none;
+  }
+}
+
+
+@mixin keyframes($name) {
+  @-webkit-keyframes #{$name} {
+    @content
+  }
+  @-moz-keyframes #{$name} {
+    @content
+  }
+  @-ms-keyframes #{$name} {
+    @content
+  }
+  @-o-keyframes #{$name} {
+    @content
+  }
+  @keyframes #{$name} {
+    @content
+  }
+}
+
+
+@mixin container--small {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 725px;
+	@media screen and (max-width: 991px) {
+		max-width: 600px;
+	}
+}
+@mixin container--full {
+	max-width: 2000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+@mixin container {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 0 30px;
+	@media screen and (max-width: 767px) {
+		padding: 0;
+	}
+	@media (min-width: 1200px) {
+		max-width: 1200px;
+	}
+}
+
+.container {
+	@include  container;
+}
+
+
+@mixin font($weight:regular, $style: normal, $size: 16px, $height: 1.4) {
+  @if $weight == "light" {
+    font-weight: 300;
+    font-style: $style;
+    font-size: $size;
+    // font-size: calculateRem($size);
+    line-height: $height;
+  }
+
+  @else if $weight == "regular" {
+    font-weight: 400;
+    font-style: $style;
+    font-size: $size;
+    // font-size: calculateRem($size);
+    line-height: $height;
+  }
+
+  @else if $weight == "semibold" {
+    font-weight: 600;
+    font-style: $style;
+    font-size: $size;
+    // font-size: calculateRem($size);
+    line-height: $height;
+  }
+
+  @else if $weight == "bold" {
+    font-weight: 700;
+    font-style: $style;
+    font-size: $size;
+    font-size: calculateRem($size);
+    line-height: $height;
+  }
+
+  @else if $weight == "extrabold" {
+    font-weight: 800;
+    font-style: $style;
+    font-size: $size;
+    // font-size: calculateRem($size);
+    line-height: $height;
+  }
+
+}
+@mixin background($imgpath,$position:0 0,$repeat: no-repeat) {
+  background: {
+      image: url($imgpath);
+      position: $position;
+      repeat: $repeat;
+  }
+}
