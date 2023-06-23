@@ -1,18 +1,12 @@
-> *{
-  font-family: 'Open Sans', Arial,'Helvetica Neue',Helvetica, sans-serif;
-  font-size:  1.4875em;
-  line-height: 1.65em;
-}
-
 h1, .h1{
   font-size: 2.5em;
   font-weight: 100;
-  color: $plt__membership__general;
+  color: $body-color;
 }
 
 .-title{
   @extend .h1, .text-center;
-  color: $plt__membership__general;
+  color: $body-color;
 }
 
 
@@ -46,60 +40,6 @@ input[type="reset"] {
   @extend .btn;
 
   font-size: 1.6rem !important;
-
-  // &:focus{
-  //   outline: none;
-  // }
-  // Default
-  @include button-variant(
-    $plt__core__united_blue,
-    $plt__core__united_blue,
-    $color: $plt__core__white,
-    $disabled-background: gray,
-    $disabled-color: $plt__core__white,
-    $disabled-border: darkgray
-  );
-
-
-}
-
-.btn-default {
-  @include button-variant(
-    $plt__core__white,
-    $plt__secondary__purple__dark,
-    $color: $plt__secondary__purple__dark,
-    $disabled-background: gray,
-    $disabled-color: $plt__core__white,
-    $disabled-border: darkgray,
-    $hover-color:$plt__secondary__purple__dark--80
-  );
-  --#{$prefix}btn-focus-shadow-rgb: var(--btn-focus-rgb);
-  --#{$prefix}btn-border-width: 2px;
-
-}
-
-.btn-primary{
-  @include button-variant(
-    $plt__core__united_blue,
-    $plt__core__united_blue,
-    $color: $plt__core__white,
-    $disabled-background: gray,
-    $disabled-color: $plt__core__white,
-    $disabled-border: darkgray
-  );
-  --#{$prefix}btn-focus-shadow-rgb: var(--btn-focus-rgb);
-}
-
-.btn-secondary {
-  @include button-variant(
-    $plt__core__white,
-    $plt__core__white,
-    $color: $plt__core__black,
-    $hover-background: $plt__neutral__tonal_gray__light,
-    $disabled-background: gray,
-    $disabled-color: $plt__core__white,
-    $disabled-border: darkgray
-  );
 }
 
 //Tables

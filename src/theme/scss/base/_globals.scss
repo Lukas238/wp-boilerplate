@@ -5,34 +5,8 @@ body {
   margin: 0;
 }
 
-main {
-  margin-top: 90px;
-
-  @include media-breakpoint-up(lg) {
-    margin-top: 150px;
-  }
-}
-
-.slick-dots {
-  margin: 0;
-  padding: 0;
-  li {
-    &,
-    button,
-    button:before {
-      width: 12px;
-      height: 12px;
-    }
-
-    button::before {
-      content: '';
-      opacity: 1;
-      border-radius: 3em;
-      background: $plt__neutral__gray__light;
-    }
-    &.slick-active button::before {
-      content: '';
-      background: $plt__core__dark_blue;
-    }
-  }
+body{
+	font-family: 'Open Sans', Arial,'Helvetica Neue',Helvetica, sans-serif;
+  font-size:  1.4875em;
+  line-height: 1.65em;
 }
